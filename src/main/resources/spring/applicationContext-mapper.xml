@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!-- 配置文件 -->
+    <context:property-placeholder location="classpath:config/*.properties"/>
+    <!-- 数据源 -->
+    <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/mobile?characterEncoding=utf-8"/>
+        <property name="username" value="ryzhang"/>
+        <property name="password" value="ryzhang"/>
+        <property name="maxActive" value="10"/>
+        <property name="minIdle" value="5"/>
+        <property name="logAbandoned" value="true"/>
+    </bean>
+
+    <!--配置事务管理器 -->
+    <bean id="writeTransactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+          p:dataSource-ref="dataSource">
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
+        <!--<property name="sqlSessionFactoryBuilder" ref="org.apache.ibatis.session.SqlSessionFactoryBuilder" />-->
+        <property name="mapperLocations" value="classpath*:com/ryzhang/mapper/*Mapper.xml"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.ryzhang.dao.**" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+
+        <constructor-arg index="0" ref="sqlSessionFactory" />
+        <!-- 这个执行器会批量执行更新语句, 还有SIMPLE 和 REUSE -->
+        <constructor-arg index="1" value="BATCH" />
+    </bean>
+
+</beans>

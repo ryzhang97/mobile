@@ -6,8 +6,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
     <!-- 自动扫描装配 -->
-    <context:component-scan base-package="com.ryzhang.controller"/>
+    <context:component-scan base-package="com.*"/>
+    <!--<context:component-scan base-package="com.ryzhang.service"/>-->
     <!--启用spring的一些annotation -->
     <context:annotation-config/>
     <!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
@@ -18,4 +20,5 @@
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="1048576000"/>
     </bean>
+
 </beans>
