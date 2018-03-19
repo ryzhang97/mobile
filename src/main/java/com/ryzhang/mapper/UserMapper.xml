@@ -2,12 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
 <mapper namespace="com.ryzhang.dao.IUserDao">
-    <select id="getUser" resultType="com.ryzhang.entity.UserEntity"  parameterType="java.lang.Integer">
-        SELECT * FROM tb_user WHERE id = #{id}
+    <select id="getUser" parameterType="java.lang.Integer" resultType="com.ryzhang.entity.UserEntity">
+        SELECT id,name FROM tb_user WHERE id = #{id}
     </select>
-
-    <!--<select id="getUser" resultType="com.ryzhang.entity.UserEntity"  parameterType="java.lang.Integer">
-        SELECT * FROM tb_user WHERE id = #{id}
-    </select>-->
+    <insert id="addUser" parameterType="com.ryzhang.entity.UserEntity">
+        INSERT INTO(id,name) tb_user VALUE (#{id},#{name})
+    </insert>
 
 </mapper>

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+
 @Service("userService")
 public class UserServiceImpl implements IUserService {
     @Resource
@@ -13,5 +14,10 @@ public class UserServiceImpl implements IUserService {
 
     public UserEntity getUser(int id) {
         return userDao.getUser(id);
+    }
+
+    @Override
+    public int addUser(UserEntity userEntity) {
+        return userDao.addUser(userEntity);
     }
 }

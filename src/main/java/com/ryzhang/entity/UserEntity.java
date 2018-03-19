@@ -1,8 +1,13 @@
 package com.ryzhang.entity;
 
 public class UserEntity {
+    private int id;
     private String name;
-    private int  id;
+    public UserEntity(){}
+    public UserEntity(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public String getName() {
         return name;
