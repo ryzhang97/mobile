@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var arrayObj=[{"dCheckFlag":"N","taskId":"483","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"492","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"507","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"508","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"546","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"477","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"483","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"492","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"507","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"508","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"546","uCheckFlag":"Y"},{"dCheckFlag":"N","taskId":"477","uCheckFlag":"Y"}]
+                $.ajax({
+                    type: "GET",
+                    url: "https://xcx.fominfo.com/neusoftImpl/appDownLoad/dataDownLoad.do",
+                    dataType: "json",
+                    data:{
+                        "token": "12455236764332Af236",
+                        "frId": "1",
+                        "data": JSON.stringify(arrayObj)
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="div1"><h2>使用 jQuery AJAX 修改文本内容</h2></div>
+<button>获取其他内容</button>
+
+</body>
+</html>

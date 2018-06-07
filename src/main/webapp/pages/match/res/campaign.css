@@ -1,0 +1,527 @@
+.campaign-cells {
+	margin-top: 0;
+	color: #666;
+	font-size: .4rem;
+}
+.campaign-cells i.fa {
+	font-size: .4rem;
+	width: .8rem;
+    height: .8rem;
+    line-height: .85rem;
+    margin-right: .3rem;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.campaign-cells i.back-red {
+	background-color: #ff847f;
+}
+.campaign-cells i.back-blue {
+	background-color: #20d4ef;
+}
+.campaign-cells i.back-orange {
+    background-color: #CD6600;
+}
+.campaign-cells i.back-green {
+    background-color: #006400;
+}
+.enroll-swiper {
+	height: 5.63rem;
+}
+.enroll-swiper .swiper-slide img {
+	width: 100%;
+}
+
+/** 分享页面 */
+.share-body {
+	background-color: #6b249a;
+	z-index: -5;
+}
+.share {
+	box-sizing: border-box;
+	padding-bottom: .5rem;
+}
+.avatar-box {
+	text-align: center;
+	padding: 0.8rem 0 .2rem 0;
+}
+.avatar-box .avatar img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 3px solid white;
+	border-radius: 50%;
+}
+.ribbon{width:67%;height:1.2rem;margin:0 auto;position:relative;top: .1rem;z-index: 9;}
+.ribbon .ribbon-content{width:100%;text-align:center;font-size:.4rem;font-weight:200;line-height:1.2rem;background:#ff778a;color:#fff;z-index: 2;}
+/* 彩带左右伪选择器生成的领结花 */
+.ribbon:before, .ribbon:after { content: ""; position: absolute; display: block; bottom: -.3rem; border: .55rem solid #f14a6f; z-index: -1;}
+/* 定位左边和右边的领结花 */
+.ribbon:before {left: -1.25rem; border-right-width: 1rem;border-left-color: transparent;}
+.ribbon:after {right: -1.25rem;border-left-width: 1rem;border-right-color: transparent;}
+/* 生成领结阴影 */
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {content: "";position: absolute; display: block;border-style:solid;border-color: #be1238 transparent transparent transparent; bottom: -.3rem;}
+/* 定位阴影位置 */
+.ribbon .ribbon-content:before {left: 0; border-width: 0.3rem 0 0 .3rem;}
+.ribbon .ribbon-content:after {right: 0; border-width: 0.3rem .3rem 0 0;}
+
+.share_content{
+	margin: 0 15px;
+	/*position: relative;*/
+	background-color: #fffeea;
+	/*z-index: -2;*/
+}
+.share_content_title {
+	position: absolute;
+	left: 0;
+	top: -35px;
+	display: flex;
+	width: 100%;
+	margin: 0;
+}
+.share_content_title_word {
+	flex: 1;
+	height: .8rem;
+	line-height: .8rem;
+	background-color: #ff7789;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	z-index: 6;
+}
+.share_content_title_word:before{
+	content: "";
+	border-width: 5px;
+	border-color:#c21239 #c21239 transparent  transparent ;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	font-size: 0px;
+	line-height: 0px;
+	position: absolute;
+	z-index: 4;
+	left: -1px;
+	bottom: -9px;
+}
+.share_content_title_word:after{
+	content: "";
+	border-width: 5px;
+	border-color: #c21239 transparent transparent #c21239;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	font-size: 0px;
+	line-height: 0px;
+	position: absolute;
+	z-index: 4;
+	right: -1px;
+	bottom: -9px;
+}
+.share_content_title_deg{
+	width: 30px;
+	height: 30px;
+	background-color: #f04b6e;
+	box-sizing: border-box;
+	margin-top: 21px;
+	position: relative;
+}
+.share_content_title_deg:first-child{
+	left: 9px;
+}
+.share_content_title_deg:last-child{
+	right: 9px;
+}
+.share_content_title>div:before {
+	content: "";
+	border-width: 15px;
+	border-color: transparent transparent transparent white;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	font-size: 0px;
+	line-height: 0px;
+	position: absolute;
+	z-index: 2;
+	left: 9px;
+	top: 21px;
+}
+.share_content_title>div:after {
+	content: "";
+	border-width: 15px;
+	border-color: transparent white transparent transparent ;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	font-size: 0px;
+	line-height: 0px;
+	position: absolute;
+	z-index: 2;
+	right: 9px;
+	top: 21px;
+}
+.share_content_title_deg:first-child:before {
+	content: "";
+	border-width: 7px;
+	border-color:  transparent transparent #6b249a #6b249a ;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	font-size: 0px;
+	line-height: 0px;
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	top: 0;
+}
+.share_content_title_deg:last-child:after {
+	content: "";
+	border-width: 7px;
+	border-color: transparent #6b249a #6b249a transparent;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	font-size: 0px;
+	line-height: 0px;
+	position: absolute;
+	z-index: 3;
+	right: 0;
+	top: 0;
+}
+.share_content_msg {
+	position: relative;
+	/*z-index: 3;*/
+}
+.share_content_msg>h3{
+	padding: .6rem .4rem .2rem .4rem;
+	font-size: .35rem;
+	font-weight: 400;
+}
+.share_content_msg .weui-cell:before{
+	height: 0;
+	border-width: 0;
+}
+.share_content_msg .campaign-cells {
+	margin: .2rem .4rem .4rem .4rem;
+	background-color: #ffffcc;
+}
+.share_content_msg .campaign-cells .weui-cell_access {
+	padding: 5px;
+}
+.share_content_msg .campaign-cells .weui-cell_access .weui-cell__bd {
+	font-size: .35rem;
+}
+.share_content_person{
+	position: relative;
+	height: 32px;
+	line-height: 32px;
+	padding-left:20px;
+	padding-right:20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.share_content_person:before{
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-color: #6b249a;
+	border-radius: 50%;
+	left: -12px;
+	top: 4px;
+}
+.share_content_person:after{
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-color: #6b249a;
+	border-radius: 50%;
+	right: -12px;
+	top: 4px;
+}
+.share_content_person_num{
+	position: relative;
+	padding: 0 20px;
+}
+.share_content_person_num:before{
+	content: "";
+	width: 30px;
+	height: 1px;
+	border-top: 1px solid #cccccc;
+	position: absolute;
+	left: 0;
+	top: 15px;
+}
+.share_content_person_num:after{
+	content: "";
+	width: 30px;
+	height: 1px;
+	border-top: 1px solid #cccccc;
+	position: absolute;
+	right: 0;
+	top: 15px;
+}
+.share_content_person_num p {
+	text-align: center;
+	background-color: #264A33;
+	margin: 0 15px;
+	padding: 0 10px;
+	border-radius: 3px;
+	height: 32px;
+	overflow: hidden;
+	font-size: .35rem;
+	font-weight: 300;
+}
+.share_content_person_num p em {
+	color: #ff0000;
+	font-style: normal;
+	font-size: .4rem;
+	padding: 0 2px;
+}
+.share_content_img{
+	overflow: hidden;
+	padding: 5px 20px;
+	height: 50px;
+}
+.share_content_img>div{
+	text-align: center;
+	line-height: 1rem;
+	font-size: 0.48rem;
+}
+.share_content_img_list{
+	float: left;
+	width: 20%;
+	margin-top:5px;
+}
+.share_content_img_list>img{
+	display: block;
+	margin:0 auto;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+.share_qrcode{
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+.share_qrcode > img {
+	display: block;
+	margin: 0 auto;
+	width: 3.5rem;
+	height: 3.5rem;
+}
+
+
+/* 新的share页面样式 */
+.share_header{
+	background: url('/statics/images/campaign/bg01.jpg') 0 0 no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 3.04rem;
+	position: relative;
+}
+.share_header_img{
+	position: absolute;
+	top: .7rem;
+	left: 50%;
+	margin-left: -0.875rem;
+	width: 1.67rem;
+	height: 1.67rem;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+.share_content{
+	margin: 0 0.67rem;
+	background-color: #E8FFE6;
+	position: relative;
+	padding-top: 1.37rem;
+}
+.share_content_img{
+	width: 9.40rem;
+	height: 1.37rem;
+	position: absolute;
+	left: -0.365rem;
+	top: 0;
+	background: url(/statics/images/campaign/bg02.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	padding: 0;
+	color: #538739;
+}
+.share_content_word{
+	padding: 0 17px;
+}
+.share_content_word >h3{
+	font-size: 0.32rem;
+	font-weight: normal;
+	margin-bottom: 0.53rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.share_msg{
+	background-color: #E0FFCC;
+	margin-bottom: 15px;
+}
+.share_msg .weui-cell{
+	padding: 5px;
+}
+.share_msg i.fa {
+    font-size: .4rem;
+    width: .8rem;
+    height: .8rem;
+    line-height: .85rem;
+    margin-right: .25rem;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.share_msg i:before{
+	margin-left: -1px;
+	margin-top: -1px;
+}
+.share_msg i.back-red {
+    background-color: #ff847f;
+}
+.share_msg i.back-blue {
+    background-color: #20d4ef;
+}
+.share_msg p{
+	font-size: 0.32rem;
+}
+.share_content_person {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+.share_content_person_num {
+    position: relative;
+    padding: 0 20px;
+}
+.share_content_person:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #6b249a;
+    border-radius: 50%;
+    left: -29px;
+    top: 4px;
+}
+.share_content_person:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #6b249a;
+    border-radius: 50%;
+    right: -29px;
+    top: 4px;
+}
+.share_content_person_num {
+    position: relative;
+    padding: 0 20px;
+}
+.share_content_person_num:before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    border-top: 1px solid #C1FA9E;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+.share_content_person_num:after {
+    content: "";
+    width: 30px;
+    height: 1px;
+    border-top: 1px solid #C1FA9E;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+.share_content_person_num p {
+    text-align: center;
+    background-color: #C1FA9E;
+    margin: 0 15px;
+    padding: 0 10px;
+    border-radius: 3px;
+    height: 32px;
+    overflow: hidden;
+    font-size: .35rem;
+    font-weight: 300;
+    color: #264A33;
+}
+.share_content_person_num p em {
+    color: #E62129;
+    font-weight: bold;
+    font-style: normal;
+    font-size: .4rem;
+    padding: 0 2px;
+}
+.share_joiner_img{
+	overflow: hidden;
+	height: 1.12rem;
+}
+.share_joiner_img li {
+	margin: 0;
+	width: 20%;
+	display: inline-block;
+	float: left;
+	text-align: center;
+}
+.share_joiner_img li img {
+	width: 1.12rem;
+	height: 1.12rem;
+	border-radius: 50%;
+}
+.share_qrcode {
+    padding-top: 8px;
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+.share_qrcode > img{
+	width: 2.96rem;
+	height: 2.96rem;
+	border: 4px solid #60CA1F;
+}
+.share_tail{
+	width: 9.13rem;
+	height: 1.866rem;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: -0.16rem;
+	left: -0.27rem;
+}
+.share_tail_left{
+	position: absolute;
+	left: -0.26rem;
+	bottom: -0.14rem;
+	width: 3.04rem;
+	height: 1.84rem;
+	background: url(/statics/images/campaign/bg04-b.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.share_tail_right{
+	width: 3.04rem;
+	height: 1.84rem;
+	position: absolute;
+	right: -0.27rem;
+	bottom: -0.14rem;
+	background: url(/statics/images/campaign/bg04-a.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.fixed-bottom{
+	z-index: 5;
+}
